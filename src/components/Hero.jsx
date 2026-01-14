@@ -5,8 +5,7 @@ import hand from "../assets/images/HandShake.png";
 import profile from "../assets/images/profile.png";
 import MessageBox from "./MessageBox";
 import { motion, useAnimation } from "framer-motion";
-
-
+import resume from "../../public/files/Charles_Palencia_Resume.pdf";
 
 export default function Hero() {
   const controls = useAnimation();
@@ -50,7 +49,7 @@ export default function Hero() {
           direction="to-left"
           message="Download My Resume Here!"
           onClick={() => {
-            alert("qweqw");
+            window.open(resume, "_blank");
           }}
           otherStyles={{
             top: "0px",
@@ -191,13 +190,13 @@ export default function Hero() {
         </motion.h2>
       </div>
       <motion.p
-       initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.5,
-            ease: "easeOut",
-            delay: 0.2,
-          }}
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.5,
+          ease: "easeOut",
+          delay: 0.2,
+        }}
       >
         I build and modernize production-ready web applications used by real
         businesses.
