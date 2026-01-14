@@ -6,5 +6,5 @@ import { plugin } from "postcss";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: "https://github.com/charrlesss/charles-portfolio",
+  base: "/charles-portfolio",
 });
