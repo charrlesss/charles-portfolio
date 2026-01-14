@@ -8,6 +8,7 @@ import Submarine from "./components/Submarine";
 import Navigation from "./components/Navigation";
 import Experience from "./components/Experience";
 import AboutMe from "./components/AboutMe";
+import { Helmet } from "react-helmet";
 
 function App() {
   const containerRef = useRef(null);
@@ -164,26 +165,28 @@ function App() {
       containerRef.current.style.transition = "";
     }, 600);
   };
-
   return (
     <>
+      <Helmet>
+        <title> {`Portfolio - ${sections[currentSection]} Page`} </title>
+      </Helmet>
       <Navigation
         sections={sections}
         currentSection={currentSection}
         onNavigate={scrollToSection}
       />
       <div ref={containerRef} className="horizontal-page" onWheel={handleWheel}>
-        <section className="section bg">
+        <section className="section bg first">
           <Bubbles />
           <Hero />
         </section>
-        <section className="section bg">
+        <section className="section bg second">
           <Bubbles />
           <Experience setDisableActivity={setDisableActivity} />
         </section>
-        <section className="section bg">
+        <section className="section bg third">
           <Bubbles />
-          <AboutMe setDisableActivity={setDisableActivity}  />
+          <AboutMe setDisableActivity={setDisableActivity} />
         </section>
       </div>
     </>

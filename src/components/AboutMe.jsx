@@ -25,36 +25,43 @@ const AboutMe = ({ setDisableActivity }) => {
       <div className="education-container">
         <h1>EDUCATIONAL BACKGROUND</h1>
         <div className="education-content">
-          <ul>
-            <li>
-              <strong>Elementary</strong>
-            </li>
-            <li>Gabriela Silang Elementary School</li>
-            <li>2006 – 2013</li>
-            <li>
-              <strong>High School</strong>
-            </li>
-            <li>Benigno Aquino Jr. High School</li>
-            <li>2013 – 2017</li>
-          </ul>
-
-          <ul>
-            <li>
-              <strong>Senior High School</strong>
-            </li>
-            <li>Information Communication Technology</li>
-            <li>St. Claire College of Caloocan City</li>
-            <li>2017 – 2019</li>
-            <li>
-              <strong>College</strong>
-            </li>
-            <li>Bachelor of Science in Information Technology</li>
-            <li>
-              Major in information Management Bestlink College of the
-              Philippines{" "}
-            </li>
-            <li>2019 – 2023</li>
-          </ul>
+          <div>
+           <ul>
+              <li>
+                <strong>Elementary</strong>
+              </li>
+              <li>Gabriela Silang Elementary School</li>
+              <li>2006 – 2013</li>
+            </ul>
+            <ul>
+              <li>
+                <strong>High School</strong>
+              </li>
+              <li>Benigno Aquino Jr. High School</li>
+              <li>2013 – 2017</li>
+            </ul> 
+          </div>
+          <div>
+            <ul>
+              <li>
+                <strong>Senior High School</strong>
+              </li>
+              <li>Information Communication Technology</li>
+              <li>St. Claire College of Caloocan City</li>
+              <li>2017 – 2019</li>
+            </ul>
+            <ul>
+              <li>
+                <strong>College</strong>
+              </li>
+              <li>Bachelor of Science in Information Technology</li>
+              <li>
+                Major in information Management Bestlink College of the
+                Philippines{" "}
+              </li>
+              <li>2019 – 2023</li>
+            </ul> 
+          </div>
         </div>
       </div>
     </motion.div>

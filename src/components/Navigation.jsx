@@ -2,7 +2,6 @@ import React from "react";
 import "../style/navigation.css";
 
 function Navigation({ sections, currentSection, onNavigate }) {
-  console.log(sections);
   return (
     <div className="section-nav">
       {sections.map((section, index) => (

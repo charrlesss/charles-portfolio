@@ -53,3 +53,40 @@ body {
   height: 100vh;
   position: relative;
 }
+
+@media (max-width: 1000px) {
+  .section.second {
+    overflow-y: auto !important;
+  }
+  .section.third {
+    overflow-y: auto !important;
+  }
+  .tech-section {
+    padding: 0 !important;
+    padding: 15px 0 !important;
+  }
+  .main-tech-container {
+    padding: 0 10px !important;
+  }
+  .img-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 900px) {
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .cards-container .card {
+    width: 100%;
+  }
+  .education-content {
+    flex-direction: column !important;
+  }
+  .education-container .education-content div {
+    height: 100% !important;
+  }
+}
