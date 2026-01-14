@@ -1,0 +1,55 @@
+.bg {
+  background: linear-gradient(
+    to right,
+    rgb(18, 54, 136) 0%,
+    rgb(15, 30, 60) 20%,
+    rgb(8, 20, 42) 40%,
+    rgb(8, 20, 42) 65%,
+    rgb(15, 30, 60) 80%,
+    rgb(18, 54, 136) 100%
+  );
+  /* max-width: 100vw;
+  max-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden; */
+}
+
+/* Make page scroll horizontally */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Main horizontal container */
+.horizontal-page {
+  display: flex;
+  width: 300vw; /* 3 sections */
+  height: 100vh;
+  scroll-behavior: smooth;
+  cursor: grab;
+  transition: transform 0.8s ease-in-out; /* smooth sliding animation */
+}
+
+.horizontal-page:active {
+  cursor: grabbing;
+}
+
+.section {
+  width: 100vw; /* use width instead of min-width for strict full screen */
+  max-width: 100%; /* prevent overflow on resize */
+  height: 100vh;
+  flex-shrink: 0;
+  box-sizing: border-box; /* include borders/padding */
+  padding-top: 70px;
+}
+
+/* Each full-screen section */
+.section {
+  min-width: 100vw;
+  height: 100vh;
+  position: relative;
+}

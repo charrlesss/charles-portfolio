@@ -1,0 +1,203 @@
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  padding: 10px;
+}
+
+.glass-card {
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  color: white;
+}
+
+.glass-card h3 {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+
+.company {
+  font-weight: 500;
+  opacity: 0.85;
+  font-size: 0.9rem;
+}
+
+.date {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  margin-bottom: 12px;
+}
+
+.glass-card ul {
+  padding-left: 18px;
+}
+
+.glass-card li {
+  margin-bottom: 6px;
+  font-size: 0.8rem;
+}
+.view-details {
+  height: 40px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.view-details button {
+  background-color: rgba(51, 51, 51, 0.671);
+  border-radius: 8px;
+  border-width: 0;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 10px 12px;
+  text-align: center;
+  transition: all 200ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+}
+
+.modal-card {
+  width: 95vw;
+  height: 95vh;
+  padding: 32px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: white;
+  overflow-y: auto;
+  position: relative;
+  z-index: 9999999;
+}
+
+.close-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.details-btn {
+  margin-top: 16px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  cursor: pointer;
+}
+
+/* Base list */
+.modal-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 16px 0;
+}
+
+/* Top-level items */
+.modal-card > ul > li {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 18px;
+}
+
+/* Custom bullet for main item */
+.modal-card > ul > li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Nested list */
+.modal-card ul ul {
+  margin-top: 6px;
+  margin-left: 16px;
+  padding-left: 12px;
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* Nested list items */
+.modal-card ul ul li {
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-bottom: 6px;
+  padding-left: 14px;
+  position: relative;
+  opacity: 0.85;
+}
+
+/* Custom bullet for nested items */
+.modal-card ul ul li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  opacity: 0.7;
+}
+
+.main-tech-container {
+  padding: 0 100px;
+  width: 100%;
+}
+.main-tech-container .tect-container{
+  display: flex;
+}
+.main-tech-container h1 {
+  text-align: center;
+  font-size: 1.2rem;
+}
+.main-tech-container h1,
+h2 {
+  color: white;
+}
+.img-container {
+  display: flex;
+  gap: 30px;
+}
+.img-container img {
+  width: auto;
+  height: 40px;
+}
+.tech-section {
+  padding: 0px 100px;
+  display: flex;
+  flex-direction: row;
+  row-gap: 5px;
+  padding-bottom: 5px;
+}
+.exp-description {
+  color: white;
+  text-align: center;
+}

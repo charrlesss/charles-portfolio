@@ -1,0 +1,270 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap"); */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 5%; /* reduce padding on smaller screens */
+  align-items: center;
+  color: #fff;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+.hero h1,
+.hero h2 {
+  font-size: clamp(1rem, 4vw, 3rem); /* responsive font size */
+  font-weight: 600;
+  font-family: "Google Sans Code", monospace;
+  text-align: center;
+}
+
+.hero p {
+  margin-top: 1rem;
+  max-width: 90%; /* allow shrinking on mobile */
+  line-height: 1.4;
+  text-align: center;
+  font-size: clamp(0.8rem, 4vw, 1.5rem);
+  opacity: 0.8;
+}
+.typing-container {
+  display: flex;
+  width: 900px;
+}
+
+.typing-container .default-typing {
+  width: 290px;
+}
+/* Typing effect */
+.typing {
+  color: #7dd3fc;
+  font-weight: 600;
+}
+
+.cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.hand-wrapper {
+  position: relative;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.hand-wrapper-message {
+  position: absolute;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.circle-bg {
+  position: relative;
+  width: clamp(120px, 25vw, 200px);
+  height: clamp(120px, 25vw, 200px);
+  background: white;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 0;
+}
+.circle-bg .topline {
+  background-color: red;
+  width: 200px;
+  height: 50%;
+  border-bottom: 5px solid black;
+  z-index: 1;
+}
+.circle-bg .bottomline {
+  background-color: white;
+  width: 200px;
+  height: 50%;
+  border-top: 5px solid black;
+  z-index: 1;
+}
+
+.circle-bg .circleline {
+  background-color: white;
+  border: 10px solid black;
+  width: 99px;
+  height: 99px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.circle-bg .circlelinelast {
+  background-color: white;
+  border: 5px solid black;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.circle-bg img {
+  position: absolute;
+  z-index: 0;
+}
+
+/* Hand waving animation */
+.hand {
+  position: absolute;
+  height: auto;
+  width: 50px !important;
+  transform-origin: bottom center;
+  animation: wave 2.5s infinite;
+  bottom: 10px;
+  left: 5px;
+  z-index: 100;
+}
+
+.profile-message {
+  position: absolute;
+  width: 145px;
+  height: 145px;
+  top: -48px;
+  right: -98px;
+}
+.profile-message-border {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: -50px;
+  right: -100px;
+}
+.profile-message-container {
+  position: absolute;
+  width: 126px;
+  height: 126px;
+  top: -42px;
+  right: -91px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(15deg);
+  }
+  30% {
+    transform: rotate(-15deg);
+  }
+  45% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 950px) {
+  .typing-container {
+    flex-direction: column; /* stack items vertically on small screens */
+    width: 100%;
+    padding: 0 10px;
+    width: auto !important;
+  }
+  .typing-container .default-typing {
+    width: 100%; /* full width on mobile */
+  }
+}
+@media (max-width: 750px) {
+  .circle-bg .circleline {
+    width: 65px;
+    height: 65px;
+    border: 7px solid black;
+  }
+  .circle-bg .circlelinelast {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 620px) {
+  .message-box.to-left {
+    left: -100px !important;
+    top: -45px !important;
+    width: 146px !important;
+  }
+  .message {
+    font-size: 10px !important;
+    z-index: 100;
+  }
+
+  .message-box.to-right {
+    right: -100px !important;
+    bottom: 5px !important;
+    width: 146px !important;
+    z-index: 100 !important;
+  }
+
+  .message-box.to-right-top {
+    top: -60px !important;
+    right: -70px !important;
+  }
+
+  .profile-message {
+    top: -68px;
+    right: -98px;
+
+    width: 125px;
+    height: 125px;
+  }
+  .profile-message-border {
+    top: -70px;
+    right: -100px;
+
+    width: 130px;
+    height: 130px;
+  }
+  .profile-message-container {
+    top: -62px;
+    right: -91px;
+
+    width: 106px;
+    height: 106px;
+  }
+
+  .hand {
+    width: 40px !important;
+  }
+}
+
+@media (max-width: 550px) {
+  .circle-bg .circleline {
+    width: 50px;
+    height: 50px;
+    border: 5px solid black;
+  }
+  .circle-bg .circlelinelast {
+    width: 25px;
+    height: 25px;
+  }
+}

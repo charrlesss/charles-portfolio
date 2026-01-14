@@ -1,0 +1,89 @@
+.aboutme-main-container {
+  width: 100%;
+  height: 100%;
+}
+
+.aboutme-main-container div {
+  width: 50%;
+  margin: auto;
+}
+
+.aboutme-main-container h1 {
+  padding-bottom: 5px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+}
+.aboutme-main-container p strong {
+  color: white;
+}
+.aboutme-main-container p {
+  color: rgba(255, 255, 255, 0.77);
+}
+
+.cards-container {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.card {
+  width: 220px;
+  height: 160px;
+  border: 2px solid #e6e6e6;
+  border-radius: 14px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  /* smooth animation */
+  transition: border-color 0.35s ease, box-shadow 0.35s ease,
+    transform 0.35s ease;
+}
+
+.card:hover {
+  border-color: #1e6cff; /* nice blue */
+  box-shadow: 0 12px 30px rgba(30, 108, 255, 0.18);
+  transform: translateY(-6px);
+}
+
+.card-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 14px;
+  transition: transform 0.35s ease;
+}
+
+.card:hover .card-icon {
+  transform: scale(1.1);
+}
+.card h3 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #222;
+}
+.education-container{
+    color: white;
+    width: 100%;
+}
+.education-container .education-content{
+    display: flex;
+    color: white;
+    width: 100%;
+}
+.education-container .education-content ul{
+    width: 50%;
+}
+@media (max-width: 620px) {
+  .aboutme-main-container div {
+    width: 100%;
+    margin: auto;
+    padding: 0 10px;
+  }
+}
