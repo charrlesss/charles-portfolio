@@ -1,21 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap");
 
-
 @font-face {
   font-family: Lato;
-  src: url("./assets/fonts/Lato/Lato-Regular.ttf");
+  src: url("../../public/fonts/Lato/Lato-Regular.ttf");
 }
 @font-face {
   font-family: Poppins;
-  src: url("./assets/fonts/Poppins/Poppins-Black.ttf");
+  src: url("../../public/fonts/Poppins/Poppins-Black.ttf");
 }
 @font-face {
   font-family: LatoThin;
-  src: url("./assets/fonts/Poppins/Poppins-Thin.ttf");
+  src: url("../../public/fonts/Poppins/Poppins-Thin.ttf");
 }
 @font-face {
   font-family: LatoMedium;
-  src: url("./assets/fonts/Poppins/Poppins-Light.ttf");
+  src: url("../../public/fonts/Poppins/Poppins-Light.ttf");
 }
 body {
   width: 100vw;
